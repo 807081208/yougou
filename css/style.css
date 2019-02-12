@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+a{text-decoration: none;}
+li{
+	list-style: none;
+}
+/*导航*/
+.header-warp{
+	width: 100%;
+	height: 40px;
+	background: #333333;
+}
+.header-content{
+	margin: 0 auto;
+	width: 85%;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.con-left,.con-right{
+	display: flex;
+	
+}
+.con-left p{
+	margin-right: 26px;
+}
+.con-right p{
+	margin-left: 28px;
+	display: flex;
+}
+.con-right b{
+	color:#ddd;
+	font-weight: normal;
+}
+.con-left a{
+	
+	/*display: block;*/
+	font-size: 12px;
+	color: #fff;
+}
+.con-right a,.con-right i{
+	/*display: block;*/
+	
+	font-size: 12px;
+	color: #fff;
+}
+.header-content a:hover{
+	color:#ccc;
+	}
+/*logo*/
+.header-logo{
+	width: 100%;
+	background: #cfc;
+}
+.logo{
+	width: 98px;
+	height: 58px;
+	margin: 0 auto;
+	padding: 55px 0;
+}
+/*.nav-container .nav{
+	display: flex;
+	justify-content: space-around;
+}*/
+.nav-container .nav ul{
+	display: flex;
+}
+.nav-container .nav ul li{
+	margin: 0 2.25%;
+	padding: 15px 9px;
+}
+.nav-container .nav ul li a{
+	font-weight: 800;
+	color: #333333;
+	font-size: 20px;
+}
+.nav-container .nav ul li a:hover{
+	text-decoration: underline;
+}
+.nav-container .line{
+	display: block;
+	height: 20px;
+	width: 200px;
+	border-bottom: 1px solid #000;
+}
