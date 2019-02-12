@@ -22,7 +22,7 @@ li{
 	height: 40px;
 	line-height: 40px;
 	display: flex;
-	justify-content: space-between;
+	justify-content:space-around;
 }
 .con-left,.con-right{
 	display: flex;
@@ -65,28 +65,199 @@ li{
 	margin: 0 auto;
 	padding: 55px 0;
 }
-/*.nav-container .nav{
-	display: flex;
-	justify-content: space-around;
-}*/
+.nav-container{
+	height: 48px;
+}
+.nav-container .nav{
+	height: 100%;	
+}
 .nav-container .nav ul{
 	display: flex;
+	flex-direction: row;
+	
 }
 .nav-container .nav ul li{
 	margin: 0 2.25%;
-	padding: 15px 9px;
+	padding: 15px 9px;	
+	flex-direction: row;	
 }
 .nav-container .nav ul li a{
 	font-weight: 800;
 	color: #333333;
 	font-size: 20px;
+	/*display:block*/
+	
+	
 }
 .nav-container .nav ul li a:hover{
 	text-decoration: underline;
 }
 .nav-container .line{
-	display: block;
+	/*display: inline-block;*/
 	height: 20px;
 	width: 200px;
 	border-bottom: 1px solid #000;
+}
+.nav-container .nav .small-logo{
+	opacity: 0;
+}
+.nav-container .nav .list>li>ul{
+	display: none;
+}
+.main-con{
+	text-align: center;
+}
+.main-con p:nth-child(1){
+	font-size: 40px;
+	margin-top: 78px;
+}
+.main-con p:nth-child(2){
+	font-size: 16px;
+	line-height: 92px;
+	height: 92px;
+}
+.main-con p{
+	color: #333333;
+}
+.main-con p:nth-child(2) a{
+	color: #333333;
+}
+.main-con p a:active{
+	text-decoration: underline;
+}
+.main-product{
+	display: flex;
+	justify-content: center;
+	}
+.main-product span{
+	font-size: 40px;
+	line-height: 406px;
+	height: 406px;
+	color: #ccc;
+}
+.main-product .product{
+	width: 210px;
+	height: 386px;
+	background: #eeeeee;
+	text-align: center;
+	border: 10px solid #eeeeee;
+}
+.main-product .product p:nth-child(1) img{
+	width: 210px;
+	height: 270px;
+}
+.banners img{
+	width: 100%;
+}
+.Tmain-product{
+	display: flex;
+	justify-content: center;
+	}
+.brand{	
+	text-align: center;
+}
+.product-video{
+	display: flex;
+	justify-content: center;
+}
+.product-video video{
+	width: 960px;
+	height: 444px;	
+}
+.fonts{
+	width: 100%;
+	background: #333333;
+	color: #fff2cc;
+}
+.fonts .font-top{
+	width: 100%;
+	height: 115px;
+	line-height: 115px;
+	border-bottom: 1px solid #666666;
+	
+	display: flex;
+	
+	font-size: 18px;
+	
+}
+.fonts .font-top p:nth-child(1),.fonts .font-bottom1 ul:nth-child(1),.fonts .font-bottom2 span:nth-child(1),.font-bottom3 ul li:nth-child(1){
+	margin-left:205px;
+}
+.fonts .font-top p{
+	margin-right: 55px;
+}
+.fonts .font-bottom{
+	
+	height: 475px;
+	border-bottom: 1px solid #666;
+	
+}
+.fonts .font-bottom1{
+	display: flex;	
+}
+.fonts .font-bottom1 ul{
+	margin-right: 95px;
+	font-size: 12px;
+}
+.fonts .font-bottom1 ul li a{
+	color:#666666;
+	display: block;
+	margin-bottom: 24px;
+}
+.fonts .font-bottom1 ul li:nth-child(1){
+	color: #fff;
+	line-height: 72px;
+	height: 72px;
+}
+.font-bottom2{
+	display: flex;
+}
+.fonts .font-bottom2 span img{
+	width: 122px;
+	height: 45px;
+	border: none;
+	margin-top: 140px;
+	margin-right: 18px;
+}
+.fonts .font-bottom2 span:nth-child(4) img{
+	margin-right: 145px;
+}
+.fonts .font-bottom2 .code{
+	width: 120px;
+	height: 150px;
+	text-align: center;
+	margin-left: 58px;
+}
+.fonts .font-bottom2 .code img{
+	width: 120px;
+	height: 120px;
+}
+.fonts .font-bottom2 .code p{
+	font-size: 12px;
+	margin-top: 18px;
+}
+
+.font-bottom3 ul{
+	display: flex;
+	margin-top: 25px;
+}
+
+.font-bottom3 ul li a{
+	font-size: 12px;
+	color: #fff;
+	margin:0 16px 0 12px;	
+}
+.font-bottom3 ul li{
+	border-left: 1px solid #566656;
+}
+.font-bottom3 ul li:nth-child(1){
+	border:none;
+}
+.font-bottom3 ul li:nth-child(1) a{
+	margin-left: 0;
+}
+.font-bottom>p{
+	font-size: 12px;
+	margin-left: 205px;
+	margin-top: 20px;
 }
