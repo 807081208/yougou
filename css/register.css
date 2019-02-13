@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+a{text-decoration: none;}
+li{
+	list-style: none;
+}
+/*导航*/
+.header-warp{
+	width: 100%;
+	height: 40px;
+	background: #333333;
+}
+.header-content{
+	margin: 0 auto;
+	width: 85%;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	justify-content:space-around;
+}
+.con-left,.con-right{
+	display: flex;
+	
+}
+.con-left p{
+	margin-right: 26px;
+}
+.con-right p{
+	margin-left: 28px;
+	display: flex;
+}
+.con-right b{
+	color:#ddd;
+	font-weight: normal;
+}
+.con-left a{
+	
+	/*display: block;*/
+	font-size: 12px;
+	color: #fff;
+}
+.con-right a,.con-right i{
+	/*display: block;*/
+	
+	font-size: 12px;
+	color: #fff;
+}
+.header-content a:hover{
+	color:#ccc;
+	}
+/*登录界面logo*/	
+.loding-logo{
+	width: 100%;
+	height: 70px;
+	background: #fff;
+	line-height: 70px;
+}	
+.loding-logo img{
+	margin-left: 300px;
+	vertical-align: middle;
+	padding-right: 30px;
+	border-right: 1px solid #ddd;
+}	
+.loding-logo span{
+	margin-left: 30px;
+	font-size: 16px;
+	color: #666666;
+}	
+/*内容部分*/
+.main-content{
+	width: 100%;
+	height: 553px;
+	background: url(../images/loding.jpg);
+	position: relative;
+}
+.main-content .lodings{
+	width: 380px;
+	height: 450px;
+	background: #fff;
+	position: absolute;
+	left: 915px;
+	top: 50px;
+	/*text-align: center;*/
+}
+.main-content .lodings p:nth-child(1){
+	width: 352px;
+	margin: 24px auto;
+	padding-bottom: 30px;
+}
+.main-content .lodings p:nth-child(1) span{
+	display: block;
+	width:176px;
+	height:40px;
+	line-height: 40px;
+	background: #f3f3f3;
+	text-align: center;
+	font-size: 12px;
+	border: none;
+	float: left;
+}
+.main-content .lodings p:nth-child(1) span:nth-child(1){
+	background: #333;
+	color: #fff;
+}
+/*.main-content .lodings p:nth-child(1) button:nth-child(2){
+	margin-left: 0;
+}*/
+.main-content .lodings p:nth-child(2){
+	width: 310px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #e3e2e2;
+	/*background: #cfc;*/
+	clear: both;
+	margin:0 auto;
+	margin-top:20px ;
+}
+.main-content .lodings p:nth-child(3){
+	width: 200px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #e3e2e2;
+	/*background: #cfc;*/
+	clear: both;
+	margin:0 auto;
+	margin-top:20px ;
+}
+.main-content .lodings p:nth-child(2) span,.main-content .lodings p:nth-child(3) span{
+	width: 45px;	
+	margin-left: 16px;
+}
+.main-content .lodings p:nth-child(2) input.main-content .lodings p:nth-child(3) input{
+	width: 230px;
+	text-align: center;
+	border: none;
+}
+/*.main-content .lodings p:nth-child(3) input{
+	width: 200px;
+	text-align: center;
+	border: none;
+}*/
+
+/*底部*/
+.loding-bottom p{
+	text-align: center;
+	margin-top: 30px;
+	font-size: 12px;
+	color: #666;
+}

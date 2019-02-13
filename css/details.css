@@ -1,0 +1,474 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+}
+a{text-decoration: none;}
+li{
+	list-style: none;
+}
+/*导航*/
+.header-warp{
+	width: 100%;
+	height: 40px;
+	background: #333333;
+}
+.header-content{
+	margin: 0 auto;
+	width: 85%;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	justify-content:space-around;
+}
+.con-left,.con-right{
+	display: flex;
+	
+}
+.con-left p{
+	margin-right: 26px;
+}
+.con-right p{
+	margin-left: 28px;
+	display: flex;
+}
+.con-right b{
+	color:#ddd;
+	font-weight: normal;
+}
+.con-left a{
+	
+	/*display: block;*/
+	font-size: 12px;
+	color: #fff;
+}
+.con-right a,.con-right i{
+	/*display: block;*/
+	
+	font-size: 12px;
+	color: #fff;
+}
+.header-content a:hover{
+	color:#ccc;
+	}
+/*logo*/
+.header-logo{
+	width: 100%;
+	/*background: #cfc;*/
+}
+.logo{
+	width: 98px;
+	height: 58px;
+	margin: 0 auto;
+	padding: 55px 0;
+}
+/*nav*/
+.nav-container{
+	height: 50px;	
+}
+.nav-container .nav{
+	height: 100%;
+	position: relative;	
+}
+.nav-container .nav .list{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+	
+}
+.nav-container .nav ul li{
+	margin: 0 2.25%;
+	padding: 15px 9px;	
+	flex-direction: row;	
+}
+.nav-container .nav ul li a{
+	font-weight: 800;
+	color: #333333;
+	font-size: 20px;
+	/*display:block*/	
+}
+.list .line .iconfont{
+	float: right;
+}
+.nav-container .nav ul li a:hover{
+	text-decoration: underline;
+}
+.nav-container .line{
+	/*display: inline-block;*/
+	height: 20px;
+	width: 200px;
+	border-bottom: 1px solid #000;
+}
+.nav-container .nav .small-logo{
+	opacity: 0;
+}
+.nav-container .nav .list>li>ul{
+	display: none;
+	
+}
+.nav-container .nav ul li:hover>ul{
+	display: block;
+	position: absolute;
+	background: #fff;
+	width:1600px;
+	height: 350px;
+	left: 0;
+}
+
+
+
+.magnifier{
+	display: flex;
+	margin-top: 20px;
+	
+}
+.magnifier .magnifier-l{
+	margin-left: 205px;
+}
+.magnifier .magnifier-l img{
+	width: 64px;
+	height: 64px;
+	border: 1px solid #dddddd;
+	margin-bottom: 5px;
+}
+.magnifier .magnifier-l img:hover{
+	border: 1px solid #000;
+}
+.magnifier .magnifier-m{
+	width: 480px;
+	height: 480px;
+	
+	position: relative;
+	margin-left: 40px;
+}
+.magnifier .magnifier-m .patch{
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+}
+.magnifier .magnifier-m .focus{
+      width: 300px;
+      height: 300px;
+      background:  #FEDE4F;
+      opacity: 0.5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+}
+.magnifier .magnifier-r{
+	width: 535px;
+	height: 785px;
+	
+	margin-left: 80px;
+}
+.magnifier .magnifier-r .brand-logo{
+	border: 1px solid #ddd;
+	width: 142px;
+	height: 75px;
+	
+}
+.magnifier .magnifier-r .goods-introduce{
+	margin-top: 30px;
+	font-size: 16px;
+}
+.magnifier .magnifier-r .goods-price{
+	font-size: 25px;
+	line-height: 145px;
+	height: 145px;
+	border-bottom: 1px dashed #ddd;
+}
+.magnifier .magnifier-r .goods-price s{
+	font-size: 8px;
+}
+.magnifier .magnifier-r .goods-color{
+	margin: 20px 6px;
+	font-size: 10px;
+}
+
+.magnifier .magnifier-r .goods-color span:nth-child(1){
+	vertical-align: top;
+	margin-left: 0;
+}
+.magnifier .magnifier-r span img{
+	border: 1px solid #ddd;
+	width: 42px;
+	height: 42px;
+}
+.magnifier .magnifier-r span img:hover{
+	border: 1px solid #000;
+}
+.magnifier .magnifier-r .goods-size{
+	display: flex;
+}
+.magnifier .magnifier-r .goods-size span{
+	width: 48px;
+	height: 20px;
+	border: 1px solid #ddd;
+	margin: 0 6px;
+	font-size: 8px;	
+	text-align: center;
+}
+.magnifier .magnifier-r .goods-size span:nth-child(1){
+	border: none;
+	font-size: 10px;
+	margin-left: 0;
+}
+.magnifier .magnifier-r .goods-count{
+	margin: 32px 6px;
+	font-size: 10px;
+	display: flex;
+}
+.magnifier .magnifier-r .goods-count span:nth-child(2){
+	width: 60px;
+	height: 32px;
+	border: 1px solid #ddd;
+	text-align: center;
+	line-height: 32px;	
+}
+.magnifier .magnifier-r .goods-count button{
+	display: block;
+	width: 18px;
+	height: 13px;
+	margin-left: 4px;	
+	border: none;	
+}
+.magnifier .magnifier-r .goods-count button:nth-child(1){
+	background: url(../images/top.png);	
+	margin-bottom: 6px;
+}
+.magnifier .magnifier-r .goods-count button:nth-child(2){
+	background: url(../images/bottom.png);	
+}
+.magnifier .magnifier-r .goods-count img{
+	margin-bottom: 4px;
+}
+.magnifier .magnifier-r .join-cart{
+	display: flex;
+}
+.magnifier .magnifier-r .join-cart span{
+	width: 225px;
+	height: 48px;
+	border: 1px solid #000;
+	font-size: 20px;
+	line-height: 48px;
+	text-align: center;
+}
+.magnifier .magnifier-r .join-cart span:nth-child(1){
+	margin-right: 24px;
+	background: #333;
+	color: #fff;
+}
+.magnifier .magnifier-r .join-cart span:nth-child(2){
+	background: #fff;
+	color: #333;
+}
+.magnifier .magnifier-r .goods-like{
+	display: flex;
+	margin-top: 42px;
+}
+.magnifier .magnifier-r .goods-like span{
+	margin-right: 20px;
+	font-size: 12px;
+}
+.magnifier .magnifier-r .goods-like span:nth-child(3){
+	width: 152px;
+	height: 152px;
+	text-align: center;
+	margin-left: 188px;
+}
+.magnifier .magnifier-r .goods-like span:nth-child(3) img{
+	width: 120px;
+	height: 120px;
+	padding: 5px 15px;
+	border: 1px solid #ddd;
+}
+.goods-message{
+	width: 1200px;
+	margin: 0 auto;
+}
+.goods-message h3{
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	height: 132px;
+	line-height: 132px;
+}
+.goods-message p{
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	}
+.goods-message p span{
+	width: 240px;
+	height: 80px;
+	line-height: 80px;		
+	font-size: 12px;
+}
+.size-message{
+	width: 1200px;
+	margin: 0 auto;
+}
+.size-message h3{
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	height: 132px;
+	line-height: 132px;
+}
+.size-message p{
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	}
+.size-message p span{
+	width: 10%;
+	height: 80px;
+	line-height: 80px;		
+	font-size: 12px;
+}
+.goods-details{
+	width: 1600px;	
+}
+.goods-details h3 p{
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;	
+}
+.goods-details h3 p:nth-child(1){
+	height: 132px;
+	line-height: 132px;
+}
+.goods-details h3 img{
+	width:790px;
+	height: 587px;
+	margin: 0 auto;
+}
+.big-pic{
+	width: 750px;
+	margin: 0 auto;
+}
+.last-pic{
+	width: 990px;
+	margin: 0 auto;
+}
+.last-pic img{
+	width: 990px;
+	height: 350px;
+}
+.last-pic p{
+	font-size: 10px;
+	margin-bottom: 30px;
+}
+
+
+/*底部*/
+.fonts{
+	width: 100%;
+	background: #333333;
+	color: #fff2cc;
+}
+.fonts .font-top{
+	width: 100%;
+	height: 115px;
+	line-height: 115px;
+	border-bottom: 1px solid #666666;
+	
+	display: flex;
+	
+	font-size: 18px;
+	
+}
+.fonts .font-top p:nth-child(1),.fonts .font-bottom1 ul:nth-child(1),.fonts .font-bottom2 span:nth-child(1),.font-bottom3 ul li:nth-child(1){
+	margin-left:205px;
+}
+.fonts .font-top p{
+	margin-right: 55px;
+}
+.fonts .font-bottom{
+	
+	height: 475px;
+	border-bottom: 1px solid #666;
+	
+}
+.fonts .font-bottom1{
+	display: flex;	
+}
+.fonts .font-bottom1 ul{
+	margin-right: 95px;
+	font-size: 12px;
+}
+.fonts .font-bottom1 ul li a{
+	color:#666666;
+	display: block;
+	margin-bottom: 24px;
+}
+.fonts .font-bottom1 ul a:hover{
+	color: #fff;
+}
+.fonts .font-bottom1 ul li:nth-child(1){
+	color: #fff;
+	line-height: 72px;
+	height: 72px;
+}
+.font-bottom2{
+	display: flex;
+}
+.fonts .font-bottom2 span img{
+	width: 122px;
+	height: 45px;
+	border: none;
+	margin-top: 140px;
+	margin-right: 18px;
+}
+.fonts .font-bottom2 span:nth-child(4) img{
+	margin-right: 145px;
+}
+.fonts .font-bottom2 .code{
+	width: 120px;
+	height: 150px;
+	text-align: center;
+	margin-left: 58px;
+}
+.fonts .font-bottom2 .code img{
+	width: 120px;
+	height: 120px;
+}
+.fonts .font-bottom2 .code p{
+	font-size: 12px;
+	margin-top: 18px;
+}
+
+.font-bottom3 ul{
+	display: flex;
+	margin-top: 25px;
+}
+
+.font-bottom3 ul li a{
+	font-size: 12px;
+	color: #fff;
+	margin:0 16px 0 12px;	
+}
+.font-bottom3 ul li{
+	line-height: 12px;
+	height: 12px;
+	border-left: 1px solid #566656;
+}
+.font-bottom3 ul li:nth-child(1){
+	border:none;
+}
+.font-bottom3 ul li:nth-child(1) a{
+	margin-left: 0;
+}
+.font-bottom>p{
+	font-size: 12px;
+	margin-left: 205px;
+	margin-top: 20px;
+}
