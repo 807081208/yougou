@@ -22,7 +22,7 @@ li{
 	height: 40px;
 	line-height: 40px;
 	display: flex;
-	justify-content:space-around;
+	justify-content:space-between;
 }
 .con-left,.con-right{
 	display: flex;
@@ -75,19 +75,26 @@ li{
 }
 .nav-container .nav .list{
 	display: flex;
-	flex-direction: row;
+	/*flex-direction: row;*/
 	width: 100%;
 	height: 50px;
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 	margin-bottom: 10px;
+}
+.nav-container .nav .list .second a{
+	font-size: 10px;
 	
 }
-.nav-container .nav ul li{
+.nav-container .nav .list li{
 	margin: 0 2.25%;
 	padding: 15px 9px;	
-	flex-direction: row;	
+	flex-direction: row;
+	
 }
-.nav-container .nav ul li a{
+.nav-container .nav .list .girlshoes{
+	
+}
+.nav-container .nav .list li a{
 	font-weight: 800;
 	color: #333333;
 	font-size: 20px;
@@ -96,7 +103,7 @@ li{
 .list .line .iconfont{
 	float: right;
 }
-.nav-container .nav ul li a:hover{
+.nav-container .nav .list li a:hover{
 	text-decoration: underline;
 }
 .nav-container .line{
@@ -108,17 +115,28 @@ li{
 .nav-container .nav .small-logo{
 	opacity: 0;
 }
-.nav-container .nav .list>li>ul{
+.nav-container .nav .list .girlshoes{
 	display: none;
 	
 }
-.nav-container .nav ul li:hover>ul{
-	display: block;
+.nav-container .nav .list>li:hover>ul{
+	display:block;
 	position: absolute;
 	background: #fff;
-	width:1600px;
+	width:1280px;
 	height: 350px;
 	left: 0;
+	display: flex;
+	justify-content: space-around;	
+	border-top: 1px solid #ddd;	
+	padding: 0 160px;
+	z-index: 99;
+}
+.nav-container .nav .list>li>ul li{
+	width: 20%;
+}
+.nav-container .nav .list>li>ul li ul li{
+	width: 100%;
 }
 
 
@@ -143,9 +161,13 @@ li{
 .magnifier .magnifier-m{
 	width: 480px;
 	height: 480px;
-	
-	position: relative;
-	margin-left: 40px;
+	margin: 20px;
+	position: relative;	
+	/*border: 1px solid #000;*/
+}
+.magnifier .magnifier-m img{
+	width: 100%;
+	height: 100%;
 }
 .magnifier .magnifier-m .patch{
       width: 100%;
@@ -163,7 +185,22 @@ li{
       position: absolute;
       left: 0;
       top: 0;
-      display: none;
+     /* display: none;*/
+}
+.magnifier .big-pic{
+	width: 625px;
+	height: 625px;
+	border: 1px solid #ddd;
+	position: absolute;
+	left:800px;
+	/*z-index: 1;*/
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.magnifier .big-pic img{
+      position: absolute;
+      left: 0;
+      top: 0;
 }
 .magnifier .magnifier-r{
 	width: 535px;
@@ -471,4 +508,82 @@ li{
 	font-size: 12px;
 	margin-left: 205px;
 	margin-top: 20px;
+}
+/*吸顶*/
+.top-container{
+	height: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	background: #fff;	
+	width: 100%;
+	display: none;
+}
+.top-container .nav{
+	height: 100%;
+	position: relative;	
+}
+.top-container .nav .list{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid #000;
+	margin-bottom: 10px;
+}
+.top-container .nav .list .second a{
+	font-size: 10px;
+	
+}
+.top-container .nav .list li{
+	margin: 0 2.25%;
+	padding: 15px 9px;	
+	flex-direction: row;
+	
+}
+.top-container .nav .list .girlshoes{
+	
+}
+.top-container .nav .list li a{
+	font-weight: 800;
+	color: #333333;
+	font-size: 20px;
+	/*display:block*/	
+}
+.list .line .iconfont{
+	float: right;
+}
+.top-container .nav .list li a:hover{
+	text-decoration: underline;
+}
+.top-container .line{
+	/*display: inline-block;*/
+	height: 20px;
+	width: 200px;
+	border-bottom: 1px solid #000;
+}
+.top-container .nav .small-logo img{
+	height: 150%;
+}
+.top-container .nav .list .girlshoes{
+	display: none;
+	
+}
+.top-container .nav .list>li:hover>ul{
+	display: block;
+	position: absolute;
+	background: #fff;
+	width:1280px;
+	height: 350px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;	
+	border-top: 1px solid #ddd;	
+	padding: 0 160px;
+}
+.top-container .nav .list>li>ul li{
+	width: 20%;
+}
+.top-container .nav .list>li>ul li ul li{
+	width: 100%;
 }

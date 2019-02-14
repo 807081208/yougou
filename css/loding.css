@@ -22,7 +22,7 @@ li{
 	height: 40px;
 	line-height: 40px;
 	display: flex;
-	justify-content:space-around;
+	justify-content:space-between;
 }
 .con-left,.con-right{
 	display: flex;

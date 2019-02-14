@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="{CHARSET}">
+		<meta charset="utf-8">
 		<title></title>
-		<link rel="stylesheet" href="../css/loding.css">
+		<link rel="stylesheet" href="../css/register.css">
 		<link rel="stylesheet" href="../iconfont/iconfont.css">
 		<link rel="stylesheet" href="../lodingiconfont/iconfont.css">
 	</head>
@@ -39,24 +39,43 @@
 		</div>
 <!--内容部分-->
 		<div class="main-content">
-			<div class="lodings">
-				<p>
-					<span>登录</span>
-					<span>注册</span>
-				</p>
-				
-<!--账号密码登录-->				
-				<p>
+			<div class="register">
+				<div class="re-top">
+					<p>登录</p>
+					<p>注册</p>
+				</div>			
+				<div class="phonenumber">
 					<span>手机号</span>
 					<input type="password" placeholder="请输入您的手机号">
-				</p>
-				<p>
-					<span class="iconfont">验证码</span>
-					<input type="password">	
-					<span>
-						<img src="../images/yan.png">
-					</span>
-				</p>
+				</div>
+				<div class="verify">
+					<div class="verify-con">
+						<span>验证码</span>
+						<input type="password" >
+					</div>
+					<img src="../images/yan.png"> 
+				</div>
+				<div class="m_verify">
+					<div class="m_verify-con">
+						<span>短信验证码</span>
+						<input type="password">
+					</div>
+					<p>获取验证码</p> 
+				</div>
+				<div class="passe">
+					<span>密码</span>
+					<input type="password" placeholder="字母、数字、符号均可，6-25个字符以内">
+				</div>
+				<div class="passe">
+					<span>确认密码</span>
+					<input type="password">
+				</div>
+				<div class="agreement">
+					<input type="checkbox" name="like" checked="checked"><span>我已阅读并同意《优购会员注册协议》 </span>
+				</div>
+				<div class="yes">
+					<p>确认并注册</p>
+				</div>
 			</div>
 		</div>	
 		

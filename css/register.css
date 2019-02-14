@@ -22,7 +22,7 @@ li{
 	height: 40px;
 	line-height: 40px;
 	display: flex;
-	justify-content:space-around;
+	justify-content:space-between;
 }
 .con-left,.con-right{
 	display: flex;
@@ -78,74 +78,109 @@ li{
 	height: 553px;
 	background: url(../images/loding.jpg);
 	position: relative;
+	font-size: 10px;
 }
-.main-content .lodings{
+.main-content .register{
 	width: 380px;
-	height: 450px;
+	height: 530px;
 	background: #fff;
 	position: absolute;
 	left: 915px;
-	top: 50px;
-	/*text-align: center;*/
+	margin-top: 11px;
 }
-.main-content .lodings p:nth-child(1){
-	width: 352px;
-	margin: 24px auto;
-	padding-bottom: 30px;
-}
-.main-content .lodings p:nth-child(1) span{
-	display: block;
-	width:176px;
-	height:40px;
-	line-height: 40px;
-	background: #f3f3f3;
+.main-content .register .re-top{
+	width: 345px;
+	height: 42px;
+	border-bottom: 1px solid #ddd;
+	margin: 0 auto;
 	text-align: center;
-	font-size: 12px;
-	border: none;
-	float: left;
+	font-size: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top:25px;
 }
-.main-content .lodings p:nth-child(1) span:nth-child(1){
+.main-content .register .re-top p{
+	width: 124px;
+	height: 42px;
+	margin: 0 3px;
+	line-height: 42px;
+}
+.main-content .register .re-top p:nth-child(1){
+	background: #f3f3f3;
+	color: #000;
+}
+.main-content .register .re-top p:nth-child(2){
 	background: #333;
 	color: #fff;
 }
-/*.main-content .lodings p:nth-child(1) button:nth-child(2){
-	margin-left: 0;
-}*/
-.main-content .lodings p:nth-child(2){
-	width: 310px;
-	height: 36px;
-	line-height: 36px;
-	border: 1px solid #e3e2e2;
-	/*background: #cfc;*/
-	clear: both;
-	margin:0 auto;
-	margin-top:20px ;
-}
-.main-content .lodings p:nth-child(3){
-	width: 200px;
-	height: 36px;
-	line-height: 36px;
-	border: 1px solid #e3e2e2;
-	/*background: #cfc;*/
-	clear: both;
-	margin:0 auto;
-	margin-top:20px ;
-}
-.main-content .lodings p:nth-child(2) span,.main-content .lodings p:nth-child(3) span{
-	width: 45px;	
-	margin-left: 16px;
-}
-.main-content .lodings p:nth-child(2) input.main-content .lodings p:nth-child(3) input{
-	width: 230px;
-	text-align: center;
-	border: none;
-}
-/*.main-content .lodings p:nth-child(3) input{
-	width: 200px;
-	text-align: center;
-	border: none;
-}*/
 
+
+.main-content .register .phonenumber,.main-content .register .passe{
+	width: 312px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+	margin: 0 auto;	
+	margin-top: 30px;
+}
+.main-content .register .phonenumber span,.main-content .register .verify-con span,.main-content .register .m_verify-con span,.main-content .register .passe span{
+	padding: 0 5px;	
+}
+.main-content .register .phonenumber input,.main-content .register .verify-con input,.main-content .register .m_verify-con input,.main-content .register .passe input{
+	width: 250px;
+	border: none;
+	text-align: center;
+}
+
+.main-content .register .verify,.main-content .register .m_verify{
+	width: 312px;
+	height: 38px;	
+	display: flex;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.main-content .register .verify-con{
+	width: 200px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+}
+.main-content .register .verify img{
+	width: 110px;
+	height: 38px;
+}
+
+.main-content .register .m_verify-con{
+	width: 235px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+}
+
+.main-content .register .m_verify p{
+	width: 72px;
+	height: 38px;
+	background:#333 ;
+	color: #fff;
+	line-height: 38px;
+	margin-left: 3px;
+	text-align: center;
+}
+.main-content .register .yes{
+	width: 312px;
+	height: 38px;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 38px;
+	margin-top: 3px;
+}
+.main-content .register .agreement{
+	text-align: center;
+	margin-top: 30px;
+}
 /*底部*/
 .loding-bottom p{
 	text-align: center;
