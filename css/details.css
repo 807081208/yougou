@@ -1,6 +1,12 @@
-*{
-	margin: 0;
-	padding: 0;
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
+body{font:12px "微软雅黑";}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+b,i,em,strong{font-weight:normal;font-style:normal;}
+img{border:none;vertical-align:middle;}
+*:focus{
+	outline: none;
 }
 body,html{
 	width: 100%;
@@ -112,6 +118,9 @@ li{
 	width: 200px;
 	border-bottom: 1px solid #000;
 }
+.nav-container .line input{
+	border: none;;
+}
 .nav-container .nav .small-logo{
 	opacity: 0;
 }
@@ -138,7 +147,19 @@ li{
 .nav-container .nav .list>li>ul li ul li{
 	width: 100%;
 }
-
+#wrop{
+	position: absolute;
+	z-index: 22;
+	width: 200px;
+}
+#wrop li{
+	font-size: 15px;
+	color: yellow;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	
+}
 
 
 .magnifier{
@@ -185,7 +206,7 @@ li{
       position: absolute;
       left: 0;
       top: 0;
-     /* display: none;*/
+      display: none;
 }
 .magnifier .big-pic{
 	width: 625px;
@@ -196,6 +217,7 @@ li{
 	/*z-index: 1;*/
 	overflow: hidden;
 	box-sizing: border-box;
+	display: none;
 }
 .magnifier .big-pic img{
       position: absolute;

@@ -2,7 +2,7 @@ var _top=_(".top-container")
 var header_warp=_(".header-warp")
 var header_logo=_(".header-logo")
 var nav_container=_(".nav-container")
-console.log(_top);
+
 window.addEventListener("scroll",showtop);
 function showtop(){
 	var th=header_warp.offsetHeight+header_logo.offsetHeight+nav_container.offsetHeight;
@@ -16,85 +16,88 @@ function showtop(){
 
 var mySwiper = new Swiper ('.swiper-container', {  
     loop: true,
+    autoplay:true,
     pagination: {
       el: '.swiper-pagination',
        clickable :true,
     },       
   }) 
   
-//放大镜
+
  
-	 var focus = document.querySelector(".focus");
 	 
-	 var big_pic=document.querySelector(".big-pic");
-	 var magnifier_m=document.querySelector(".magnifier-m");
- 
-	var big_bg = big_pic.children[0];
-	var small_bg = magnifier_m.children[0];
-	
-	var magnifier_l = document.querySelector(".magnifier-l");
-    var l_items = magnifier_l.children;
+	var _inner = _(".inner")
+	function fn(data){
+		var xinlist = data.goods.xin.list
+		console.log(xinlist);
+		function newinner(){
+			console.log(1)
+			var html = ""
+			xinlist.forEach((item)=>{
+				html+=		`<div class="product">
+					<p>
+						<img src="${item.img}">
+					</p>
+					<p>
+						<img src="${item.logo}">
+					</p>
+					<p class="introduce"> ${item.slogan}</p>
+					<p class="price">${item.price}</p>
+							</div>`
+			})
+			_inner.innerHTML = html
+		}
+		newinner();
+	}
+ var begin_loding = _(".begin-loding");
+ var begin_register = _(".begin-register");
+ var first_page=_(".first-page");	
+ 	console.log(first_page);
+ 	begin_loding.addEventListener("click",lodings);
+ 	function lodings(evt){
+ 		var e = evt || window.event;
+ 		open("../html/loding.html");
+ 	}
+ 	
+ 	begin_register.addEventListener("click",registers);
+ 	function registers(evt){
+ 		var e = evt || window.event;
+ 		open("../html/register.html");
+ 	}
     
-	var prop = parseInt(getComputedStyle(big_pic)["width"]) / parseInt(getComputedStyle(focus)["width"]);
-	
-	big_bg.style.width = prop * magnifier_m.offsetWidth + "px";
-    big_bg.style.height = prop * magnifier_m.offsetHeight + "px";
-    
-	magnifier_m.addEventListener("mouseenter" , toggle.bind(false,"show"));
-    magnifier_m.addEventListener("mouseleave" , toggle.bind(false,"hide"));
-    
-	function toggle(type){ 
-                  var display = null;
-                  if(type === "show"){
-                        display = "block";
-                  }else{
-                        display = "none";
+	first_page.addEventListener("click",firsts);
+ 	function firsts(evt){
+ 		var e = evt || window.event;
+ 		open("index.html");
+ 	}
+ 	
+//百度搜索
+	var search=document.getElementById("search_box");
+	var wrop=document.getElementById("wrop");
+	search.addEventListener("input",searchshow);
+	var showNum=4;
+	var timer=null;
+		
+function searchshow(){
+                  if(timer  !==  null){                      
+                        return false;
                   }
-                  focus.style.display = display;
-                  big_pic.style.display = display;
+                  timer = setTimeout(function (){                       
+                        var url = `https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${search.value}&json=1&p=3&sid=1422_21089_28131_26350_28266&req=2&csor=2`;
+
+                        jsonp(url,"cb")
+                        .then(function(res){
+                              
+                              var html = "";
+                              res.s.every((item,index)=>{
+
+                                    html += `<li>${item}</li>`
+                                    return index < showNum;
+                              })
+                              wrop.innerHTML = html;
+                        })
+                        timer = null;
+                  },100)
             }
-	magnifier_m.addEventListener("mousemove",eleMove);
-	
-	function eleMove(evt){
-                  var e = evt || window.event;
-                  var _left = e.offsetX;
-                  var _top = e.offsetY;
 
-                  _left = _left - focus.offsetWidth / 2 ;
-                  _top = _top - focus.offsetHeight / 2;
-
-                  _left = _left <= 0 ? 0 : _left;
-                  _top = _top <= 0 ? 0 : _top;
-
-                  var maxLeft = magnifier_m.offsetWidth - focus.offsetWidth;
-                  var maxTop =  magnifier_m.offsetHeight - focus.offsetHeight;
-
-                  _left = _left >= maxLeft ? maxLeft : _left;
-                  _top = _top >= maxTop ? maxTop : _top;
-             
-                  focus.style.left = _left + "px";
-                  focus.style.top = _top  + "px";
-                  
-				big_bg.style.left = -_left * prop + "px";
-                big_bg.style.top = -_top * prop + "px";
-
-            }     
-
-            l_items = Array.from(l_items);
-            l_items.forEach((item)=>{
-                  item.addEventListener("click",choice.bind(false,item))
-            })
-            
-	function choice(item){     
-                  l_items.forEach((item)=>{
-                        item.className = "";
-                  })
-              
-                  item.className = "active";
-                  
-                  var bigSrc = item.getAttribute("data-big");
-                  var smallSrc = item.getAttribute("data-small");
-                  
-                  small_bg.src = smallSrc;
-                  big_bg.src = bigSrc;
-            }
+           

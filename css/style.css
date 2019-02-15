@@ -1,6 +1,13 @@
-*{
-	margin: 0;
-	padding: 0;
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
+body{font:12px "微软雅黑";}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+b,i,em,strong{font-weight:normal;font-style:normal;}
+img{border:none;vertical-align:middle;}
+
+*:focus{
+	outline: none;
 }
 html,body{
 	width: 100%;
@@ -51,6 +58,7 @@ li{
 	font-size: 12px;
 	color: #fff;
 }
+
 .header-content a:hover{
 	color:#ccc;
 	}
@@ -111,6 +119,23 @@ li{
 	width: 200px;
 	border-bottom: 1px solid #000;
 }
+.nav-container .line input{
+	border: none;
+}
+#wrop{
+	position: absolute;
+	z-index: 22;
+	width: 200px;
+}
+#wrop li{
+	font-size: 15px;
+	color: yellow;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	
+}
+
 .nav-container .nav .small-logo{
 	opacity: 0;
 }
@@ -172,7 +197,7 @@ li{
 }
 
 /*新品推荐的产品展示*/
-.main-product{
+.main-product .inner{
 	display: flex;
 	justify-content: center;
 	}

@@ -1,6 +1,12 @@
-*{
-	margin: 0;
-	padding: 0;
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
+body{font:12px "微软雅黑";}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+b,i,em,strong{font-weight:normal;font-style:normal;}
+img{border:none;vertical-align:middle;}
+*:focus{
+	outline: none;
 }
 html,body{
 	width: 100%;
@@ -72,7 +78,7 @@ li{
 	font-size: 16px;
 	color: #666666;
 }	
-/*内容部分*/
+/*账号密码登录内容部分*/
 .main-content{
 	width: 100%;
 	height: 553px;
@@ -87,7 +93,10 @@ li{
 	left: 915px;
 	top: 50px;
 	/*text-align: center;*/
+	/*display: none;*/
+	z-index: 2;
 }
+
 .main-content .lodings p:nth-child(1){
 	width: 352px;
 	margin: 24px auto;
@@ -104,6 +113,7 @@ li{
 	border: none;
 	float: left;
 }
+
 .main-content .lodings p:nth-child(1) span:nth-child(1){
 	background: #333;
 	color: #fff;
@@ -140,8 +150,9 @@ li{
 }
 .main-content .lodings p:nth-child(2) input,.main-content .lodings p:nth-child(3) input{
 	width: 230px;
-	text-align: center;
+	/*text-align: center;*/
 	border: none;
+	margin-left: 5px;
 }
 .main-content .lodings p:nth-child(5) input{
 	width: 310px;
@@ -185,6 +196,149 @@ color: #e36161;
 	border: none;
 	color: #4a85c9;
 }
+
+/*手机号登录内容部分*/
+.main-content{
+	width: 100%;
+	height: 553px;
+	background: url(../images/loding.jpg);
+	position: relative;
+}
+.main-content .num_lodings{
+	width: 380px;
+	height: 450px;
+	background: #fff;
+	position: absolute;
+	left: 915px;
+	top: 50px;
+	/*text-align: center;*/
+}
+.main-content .num_lodings p:nth-child(1){
+	width: 352px;
+	margin: 24px auto;
+	padding-bottom: 30px;
+}
+.main-content .num_lodings p:nth-child(1) span{
+	display: block;
+	width:176px;
+	height:40px;
+	line-height: 40px;
+	background: #f3f3f3;
+	text-align: center;
+	font-size: 12px;
+	border: none;
+	float: left;
+}
+.main-content .num_lodings p:nth-child(1) span:nth-child(2){
+	background: #333;
+	color: #fff;
+}
+/*.main-content .lodings p:nth-child(1) button:nth-child(2){
+	margin-left: 0;
+}*/
+.main-content .num_lodings p:nth-child(2),.main-content .num_lodings p:nth-child(3),.main-content .num_lodings p:nth-child(5){
+	width: 310px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #e3e2e2;
+	/*background: #cfc;*/
+	clear: both;
+	margin:0 auto;
+	margin-top:20px ;
+	
+}
+
+.main-content .num_lodings p:nth-child(3){
+	width: 250px;
+	margin-left:35px;
+	margin-top:20px;
+	position: relative; 
+}
+#getyz{
+	display: block;
+	width: 55px;
+	height: 38px;
+	position: absolute;
+	top: -1px;
+	right: -60px;
+	background: #333;
+	color: #fff;
+	text-align: center;
+}
+
+
+.main-content .num_lodings p:nth-child(5){
+	margin-top: 2px;
+}
+.main-content .num_lodings p:nth-child(4){
+	width: 310px;
+	height: 36px;
+	line-height: 36px;
+	clear: both;
+	margin:0 auto;
+	margin-top:20px ;
+	font-size: 14px;
+	text-align: right;
+}
+.main-content .num_lodings p:nth-child(2) span,.main-content .num_lodings p:nth-child(3) span{
+	width: 45px;	
+	margin-left: 16px;
+	font-size: 10px;
+}
+
+.main-content .num_lodings p:nth-child(2) input{
+	width: 230px;
+	/*text-align: center;*/
+	border: none;
+	margin-left: 5px;
+}
+.main-content .num_lodings p:nth-child(3) input{
+	width: 150px;	
+	border: none;
+	margin-left: 5px;
+}
+
+.main-content .num_lodings p:nth-child(5) input{
+	width: 310px;
+	height: 36px;
+	line-height: 36px;
+	background: #000;
+	color:#fff;
+	font-size: 14px;
+	border: none;
+	/*margin-left: 16px;*/
+}
+.main-content .num_lodings p:nth-child(6){
+	font-size: 10px;
+	text-align: center;
+	margin: 15px 0;
+	color: #9999b2;
+}
+.main-content .num_lodings p:nth-child(7){
+	text-align: center;
+	margin-top: 5px;
+}
+#iconfont2,#iconfont3,#iconfont4,#iconfont5{
+	padding: 0 13px;
+  font-size: 34px;
+ border-right: 1px solid #e5e1e5;
+ 
+}
+
+#iconfont2{
+color: #36baef;	
+}
+#iconfont3{
+color: #e36161;	
+}
+#iconfont4{
+	color: #f0b96e;
+}
+#iconfont5{
+	border: none;
+	color: #4a85c9;
+}
+/*底部*/
 .loding-bottom p{
 	text-align: center;
 	margin-top: 30px;

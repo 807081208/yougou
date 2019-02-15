@@ -1,0 +1,32 @@
+fn(
+{
+"goods":{
+	"xin":{
+		"list":[
+		{
+		"img":"https://i2.ygimg.cn/pics/belle/2019/101193983/101193983_01_mb.jpg?5",
+		"logo":"https://i1.ygimg.cn/pics/brandlogo/brandlogforcms/blackL-belle.png",
+		"slogan":"休闲  满帮鞋",
+		"price":"￥1099"
+		},
+		{
+		"img":"https://i1.ygimg.cn/pics/tata/2019/101191950/101191950_01_mb.jpg?5",				 		"logo":"https://i1.ygimg.cn/pics/brandlogo/brandlogforcms/blackL-tata.png",
+		"slogan":"休闲  满帮鞋",
+		"price":"￥899"
+		},
+		{
+		"img":"https://i2.ygimg.cn/pics/teenmix/2019/101086614/101086614_01_mb.jpg?6",			 		"logo":"https://i1.ygimg.cn/pics/brandlogo/brandlogforcms/blackL-teenmix.png",
+		"slogan":"简约  中空凉鞋",
+		"price":"￥799"
+		},
+		{
+		"img":"https://i2.ygimg.cn/pics/staccato/2019/101049480/101049480_01_mb.jpg?6",
+				 		"logo":"https://i1.ygimg.cn/pics/brandlogo/brandlogforcms/blackL-staccato.png",
+		"slogan":"休闲  浅口鞋",
+		"price":"￥1199"
+			}
+			]
+		}
+	}
+}
+)

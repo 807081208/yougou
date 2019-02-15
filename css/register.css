@@ -1,6 +1,12 @@
-*{
-	margin: 0;
-	padding: 0;
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{ margin:0; padding:0; }
+body{font:12px "微软雅黑";}
+a{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+b,i,em,strong{font-weight:normal;font-style:normal;}
+img{border:none;vertical-align:middle;}
+*:focus{
+	outline: none;
 }
 html,body{
 	width: 100%;
@@ -126,12 +132,14 @@ li{
 .main-content .register .phonenumber span,.main-content .register .verify-con span,.main-content .register .m_verify-con span,.main-content .register .passe span{
 	padding: 0 5px;	
 }
-.main-content .register .phonenumber input,.main-content .register .verify-con input,.main-content .register .m_verify-con input,.main-content .register .passe input{
+.main-content .register .phonenumber input,.main-content .register .passe input{
 	width: 250px;
 	border: none;
-	text-align: center;
 }
-
+.main-content .register .verify-con input,.main-content .register .m_verify-con input{
+	width: 150px;
+	border: none;
+}
 .main-content .register .verify,.main-content .register .m_verify{
 	width: 312px;
 	height: 38px;	
