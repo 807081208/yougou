@@ -38,34 +38,36 @@
 			<span>新用户注册</span>
 		</div>
 <!--内容部分-->
-		<div class="main-content">
+		<div class="main-content" id="main-content">
 			<div class="register">
 				<div class="re-top">
-					<p>登录</p>
+					<p class="logins">登录</p>
 					<p>注册</p>
 				</div>			
 				<div class="phonenumber">
 					<span>手机号</span>
-					<input type="password" placeholder="请输入您的手机号">
+					<input type="text" id="telephonenum" placeholder="请输入您的手机号">
 				</div>
+				<i class="hide">请输入正确的手机号</i>
 				<div class="verify">
 					<div class="verify-con">
 						<span>验证码</span>
-						<input type="password" >
+						<input type="text" >
 					</div>
 					<img src="../images/yan.png"> 
 				</div>
 				<div class="m_verify">
 					<div class="m_verify-con">
 						<span>短信验证码</span>
-						<input type="password">
+						<input type="text">
 					</div>
 					<p>获取验证码</p> 
 				</div>
 				<div class="passe">
 					<span>密码</span>
-					<input type="password" placeholder="字母、数字、符号均可，6-25个字符以内">
+					<input type="password" id="password" placeholder="字母、数字、符号均可，6-25个字符以内">
 				</div>
+				<i class="hide">密码必须为6-25个字符以内</i>
 				<div class="passe">
 					<span>确认密码</span>
 					<input type="password">
@@ -73,7 +75,7 @@
 				<div class="agreement">
 					<input type="checkbox" name="like" checked="checked"><span>我已阅读并同意《优购会员注册协议》 </span>
 				</div>
-				<div class="yes">
+				<div class="yes" id="submit">
 					<p>确认并注册</p>
 				</div>
 			</div>
@@ -89,4 +91,69 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>	
 	<script src="../js/common.js"></script>
 	<script src="../js/index.js"></script>
+	<script>
+		var telephonenum = document.getElementById("telephonenum");
+        var _password = document.getElementById("password");
+        var _submit= document.getElementById("submit");
+        
+        telephonenum.addEventListener("blur",confirmtelephonenum);
+         function confirmtelephonenum(){
+                  var telephone_reg = /^1[34578]\d{9}$/;
+                  var telephonenum_str = telephonenum.value;
+                  var tip = telephonenum.parentNode.children[2];
+                  if(telephone_reg.test(telephonenum_str)){                        
+                        tip.className = "success";
+                  }else{
+                        tip.className = "error";
+                  }
+            }
+         _password.addEventListener("blur",confirmPassWord);
+
+            function confirmPassWord(){
+                  var pass_reg = /^.{6,25}$/;
+                  var pass_str = _password.value;
+                  var tip = _password.parentNode.children[2];
+                  if(pass_reg.test(pass_str)){                   
+                        var strong = 0;
+                        var symbol_reg = /[\!\@\#\$\%\^\&\*\(\)]/
+                        if(symbol_reg.test(pass_str)){
+                              strong ++;
+                        }
+                        var number_reg = /\d/
+                        if(number_reg.test(pass_str)){
+                              strong ++;
+                        }
+                        // 判定是否存在字母;
+                        var letter_reg = /[a-z]/i;
+                        if(letter_reg.test(pass_str)){
+                              strong++
+                        }
+			         }else{			       
+			                        tip.className = "error";
+			                  }
+			            }
+             _submit.addEventListener("click",submitForm)
+            function submitForm(evt){
+                  var e = evt || window.event;       
+                  var spans = document.querySelectorAll("#main-content i");
+                  spans = Array.from(spans);
+                  var res = spans.every(function(item){
+                        return item.className === "success";
+                  })
+
+                  if(res === false){
+                        e.preventDefault();
+                        spans.forEach(function(item){
+                              item.className = "error";
+                        })
+                  }
+            }
+        
+        var _logins=_(".logins")
+        _logins.addEventListener("click",lodings);
+ 		function lodings(evt){
+ 		var e = evt || window.event;
+ 		open("../html/loding.html");
+ 	}
+	</script>
 </html>

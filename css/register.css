@@ -94,6 +94,19 @@ li{
 	left: 915px;
 	margin-top: 11px;
 }
+.main-content .register i.hide{
+	display: inline-block;
+	
+	display: none;
+	
+}
+.main-content i.error{
+      display: block;
+      width: 80%;
+	text-align: left;
+	padding-left: 50px;
+      color: #f10;
+}
 .main-content .register .re-top{
 	width: 345px;
 	height: 42px;
@@ -145,7 +158,7 @@ li{
 	height: 38px;	
 	display: flex;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 25px;
 }
 .main-content .register .verify-con{
 	width: 200px;
@@ -187,7 +200,7 @@ li{
 }
 .main-content .register .agreement{
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 23px;
 }
 /*底部*/
 .loding-bottom p{
